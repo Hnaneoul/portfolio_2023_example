@@ -1,0 +1,158 @@
+/* 반응형 대비 최소제한 너비 설정 */
+header,main { min-width: 900px;}
+
+/* header */
+header {
+    z-index: 999;
+    background-color: #fff;
+    position: fixed;
+    left: 0; top:0; z-index: 999;
+    padding:35px 30px 0 30px;
+    width:100%;
+}
+header nav {
+    border-top:3px solid #000; border-bottom:5px solid #000;
+    padding:13px; 
+    display: flex; flex-flow: row nowrap; justify-content: space-between;
+}
+header nav .gnb {}
+header nav .gnb a {
+    margin-right:30px; font-size: 1.25rem;
+    font-weight: 600; letter-spacing: -0.2px; padding-bottom: 3px;
+}
+header nav .gnb a:hover {color:#fc7e7e; border-bottom: 1px dashed #000;}
+header nav .gnb a:last-child {margin-right:0;}
+header nav .sns {}
+header nav .sns img {width:4%;}
+header nav .sns span {font-weight: 600; font-size: 1.1rem}
+/* home */
+main {}
+main > * {padding:0 30px;}
+main #home {
+    height: 100vh; text-align: center; 
+    padding-top:220px; background-color: bisque;
+    
+}
+main #home h1 {}
+main #home h1 img {animation: move 2s ease alternate;}
+main #home .mouse {
+    position: absolute; left:50%; bottom:56px;
+    transform: translateX(-50%); 
+}
+main #home .mouse img {
+    animation: mouse_move 0.8s linear alternate infinite;
+}
+/* skill */
+main #skill {
+    height: 100vh; padding: 100px 0 100px;
+}
+main #skill h1 {
+    font-size: 3.5rem; padding:10px 0 15px 48px;
+    border-bottom: 3px solid #000;
+}
+main #skill .container {height: 900px; padding-left:5%;
+    
+    /* 스킬 9개 수직 줄바꿈으로 배치하는 flex */
+    display: flex; flex-flow: column wrap;
+}
+main #skill .container li { 
+    /* 아이콘, 글자 옆으로 배치하는 flex */
+    display: flex; flex-flow: row nowrap; align-items: center;
+    
+    border-bottom: 2px dashed #aaa; padding:40px 0 40px;
+    width:45%;
+}
+main #skill .container li:nth-of-type(6){margin-top:80px;}
+main #skill .container li:nth-of-type(5){border:none;}
+main #skill .container li:nth-of-type(9){border:none;}
+main #skill .container li span {}
+main #skill .container li .icon {
+    width:100px;
+}
+main #skill .container li .icon img {}
+main #skill .container li .contents {
+    width:calc(100% - 100px); line-height: 28px; 
+    padding:10px; font-weight: 600; box-shadow:3px 3px 3px #aaa;
+}
+
+/* profile */
+#profile {position: relative; padding-top:70px; margin-top:100px;}
+#profile .bg img, #profile .bg2 img {
+    position: absolute; 
+}
+#profile .bg img {left: 0; bottom:0;}
+#profile .bg2 img{right:0; top:0;}
+#profile h1 {text-align: center;}
+#profile h1 img {}
+#profile .container { 
+    height: 75vh;
+    display: flex;  justify-content: center
+}
+#profile .container .photo {
+    margin:116px 0 0 100px;z-index: 100; width:350px;}
+#profile .container .photo img {}
+#profile .container .info {margin:110px 100px; width:50%;}
+#profile .container .info h2 {
+    font-size: 1.75rem;
+    font-weight: 700;}
+#profile .container .info dl {margin-top:26px;
+    display: flex; flex-flow: row wrap;
+}
+#profile .container .info dl > * {
+    border-bottom: 1px dashed #ccc; padding:5px;
+}
+#profile .container .info dl dt {width:100px;}
+#profile .container .info dl dd {width:calc(100% - 100px); }
+#profile .container .info dl dd,#profile .container .info dl dt {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+/* project_web1 */
+#project_web1 {text-align: center; position: relative;}
+#project_web1 .web_1 {width:90%;}
+#project_web1 h1 {
+    position: absolute; top:1.6rem; left:35rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#project_web1 .link {
+    display: flex; flex-flow: column nowrap; position: absolute;
+    top:5%; right:10%;
+}
+#project_web1 .link a {
+    color:#fff; border-radius: 20px;
+    padding:17px 13px;
+}
+#project_web1 .link a:first-child {
+    background: #000; 
+}
+#project_web1 .link a:nth-child(2) { width:200px; right:0;
+    margin:24px 0 24px; background: #000; 
+}
+#project_web1 .link a:last-child {
+    background: #FFA498; color:#000;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+#project_web1 .make {}
+#project_web1 .tool {}
+#project_web1 .tool li {}
+#project_web1 .tool li img {}
+#project_web1 .make2  {}
+#project_web1 .make2 .make2_1 {}
+#project_web1 .make2 .make2_1 img {}
+#project_web1 .make2 .make2_1 img .make2_txt {}
+#project_web1 .make2 .make2_2 {}
+#project_web1 .make2 .make2_2 img {}
+#project_web1 .make2 .make2_2 img .make2_txt {}
+
+@keyframes mouse_move{
+    0%{transform: translateY(-30px); }
+    100%{transform: translateY(0);}
+}
+@keyframes move {
+    0%{transform: translateX(-3000px);}
+    50%{transform: translateX(100px);}
+    100%{transform: translateX(0);}
+}
