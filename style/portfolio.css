@@ -1,3 +1,7 @@
+body,html {scroll-behavior: smooth;}
+
+
+
 /* 반응형 대비 최소제한 너비 설정 */
 header,main { min-width: 900px;}
 
@@ -109,25 +113,25 @@ main #skill .container li .contents {
     line-height: 3rem;
 }
 /* project_web1 */
-#project_web1 {text-align: center; position: relative;}
+#project_web1 {text-align: center; position: relative; margin: 100px 0 100px;}
 #project_web1 .web_1 {width:90%;}
 #project_web1 h1 {
-    position: absolute; top:1.6rem; left:35rem;
-    font-size: 2.5rem;
+    position: absolute; top:3rem; left:35rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 #project_web1 .link {
     display: flex; flex-flow: column nowrap; position: absolute;
-    top:5%; right:10%;
+    top:5%; right:8%;
 }
-#project_web1 .link a {
+#project_web1 .link a { 
     color:#fff; border-radius: 20px;
-    padding:17px 13px;
+    padding:17px 15px; 
 }
 #project_web1 .link a:first-child {
     background: #000; 
 }
-#project_web1 .link a:nth-child(2) { width:200px; right:0;
+#project_web1 .link a:nth-child(2) {  right:0;
     margin:24px 0 24px; background: #000; 
 }
 #project_web1 .link a:last-child {
@@ -135,17 +139,30 @@ main #skill .container li .contents {
     font-size: 1.25rem;
     font-weight: 700;
 }
-#project_web1 .make {}
-#project_web1 .tool {}
-#project_web1 .tool li {}
+#project_web1 .make { 
+    position: absolute; bottom:20%; right: 50%; transform: translateX(50%);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 15px #FFF;
+}
+#project_web1 .tool {width:305px; margin-left:150px;
+    display: flex; flex-flow: row wrap; position: absolute; bottom: 1%;
+}
+#project_web1 .tool li {margin-right:35px; margin-top:15px;}
+#project_web1 .tool li:nth-of-type(4) {margin-right:0;}
+#project_web1 .tool li:nth-of-type(8) {margin-right:0;}
 #project_web1 .tool li img {}
-#project_web1 .make2  {}
-#project_web1 .make2 .make2_1 {}
+#project_web1 .make2  { margin-left: 50%; 
+    display: flex; flex-flow: column nowrap; position: absolute; bottom:0;
+}
+#project_web1 .make2 .make2_1 {
+    display: flex; flex-flow: row nowrap; align-items:  center;}
 #project_web1 .make2 .make2_1 img {}
 #project_web1 .make2 .make2_1 img .make2_txt {}
-#project_web1 .make2 .make2_2 {}
+#project_web1 .make2 .make2_2 {
+    display: flex; flex-flow: row nowrap; align-items:  center;}
 #project_web1 .make2 .make2_2 img {}
-#project_web1 .make2 .make2_2 img .make2_txt {}
+#project_web1 .make2 .make2_txt {margin:10px; font-weight: 600;}
 
 @keyframes mouse_move{
     0%{transform: translateY(-30px); }
